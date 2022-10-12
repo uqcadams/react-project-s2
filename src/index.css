@@ -1,0 +1,261 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --purpleColorLighter: #a42de8;
+  --blueColorLighter: #318aff;
+  --blueColorDarker: #2d3de8;
+  --bgColor: #ffffff;
+  --fgColor: #800080;
+  --fgColorLighter: rgba(128, 0, 128, 0.5);
+  --headerTextColor: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bgColor: #422142;
+    --fgColor: #f0c4f0;
+    --fgColorLighter: rgba(210, 169, 210, 0.5);
+    --headerTextColor: var(--fgColor);
+  }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--bgColor);
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "DynaPuff", sans-serif;
+}
+
+.page-header {
+  padding: 15pt 30pt 10pt;
+}
+
+/* Page Header */
+
+.page-header h1 {
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.page-header {
+  background: linear-gradient(0deg, var(--blueColorDarker) 0%, var(--purpleColorLighter) 100%);
+  background-color: var(--blueColorLighter);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-menu ul {
+  display: flex;
+}
+
+.main-menu li {
+  list-style: none;
+  margin-left: 2em;
+}
+
+/* Main Content */
+
+main {
+  background-color: var(--bgColor);
+  color: var(--fgColor);
+  padding: 40pt 30pt;
+}
+
+main h2 {
+  font-size: 2em;
+}
+
+main h3 {
+  font-size: 1.5em;
+}
+
+main p {
+  font-size: 0.8em;
+  color: var(--fgColorLighter);
+  padding-top: 10pt;
+}
+
+main article {
+  margin-top: 20pt;
+  background-color: white;
+  border: 2px solid var(--fgColor);
+  border-bottom: 6px solid var(--fgColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20pt;
+}
+
+main article section {
+  width: 50%;
+}
+
+main article section ul,
+#sharedPage ul {
+  background-color: white;
+  border: 2px solid var(--fgColor);
+  color: var(--fgColor);
+  padding: 5pt;
+  display: inline;
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0px 2px;
+  cursor: pointer;
+}
+
+main article section ul a:visited,
+main article section ul a:link,
+#sharedPage ul a:visited,
+#sharedPage ul a:link {
+  color: var(--fgColor);
+}
+
+main article section ul:nth-child(1) a:visited,
+main article section ul:nth-child(1) a:link {
+  color: white;
+}
+
+main article section ul:nth-child(1) {
+  background-color: var(--fgColor);
+  color: white;
+}
+
+main article section button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+main article section button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+main article section ul:hover,
+main article section ul:hover a,
+#sharedPage ul:hover,
+#sharedPage ul:hover button {
+  background-color: var(--purpleColorLighter);
+  border-color: var(--purpleColorLighter);
+  color: white;
+}
+
+/* Edit Page */
+
+table {
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1em;
+}
+
+table button {
+  width: 25%;
+  background-color: white;
+  border: 1px solid var(--fgColor);
+  border-bottom: 3px solid var(--fgColor);
+  font-size: 1.2em;
+  color: var(--fgColor);
+  padding: 0.2em;
+}
+
+table tr td:nth-child(1) {
+  width: 20pt;
+  font-weight: bold;
+  text-align: right;
+}
+
+.sequencer {
+  background-color: white;
+  border: 1px solid var(--fgColor);
+  border-bottom: 3px solid var(--fgColor);
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  margin-top: 2pt;
+}
+
+.sequencer > .bar {
+  border: 0.5px solid var(--fgColor);
+  width: 100%;
+  padding: 1em 0.25em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sequencer > .bar:hover {
+  background: var(--fgColorLighter);
+}
+
+.sequencer > .bar.selected {
+  background: var(--fgColor);
+  color: white;
+  font-weight: bold;
+}
+
+#editPage section:nth-child(1) {
+  background-color: var(--fgColorLighter);
+  border-radius: 5pt;
+  padding: 2pt 10pt;
+}
+
+table button:hover {
+  background: var(--fgColorLighter);
+}
+
+/* Shared Page */
+table .active {
+  color: white;
+  background-color: var(--fgColor);
+}
+
+#sharedPage table {
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1em;
+}
+
+#sharedPage table button {
+  width: 50%;
+  background-color: white;
+  border: 2px solid var(--fgColor);
+  border-bottom: 6px solid var(--fgColor);
+  font-size: 1.2em;
+  color: var(--fgColor);
+  padding: 0.2em;
+}
+
+#sharedPage table button:hover {
+  background-color: var(--fgColor);
+  color: white;
+}
+
+#sharedPage table tr td:nth-child(1) {
+  width: 50%;
+  font-weight: bold;
+  text-align: left;
+}
+
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  background-color: pink;
+  width: 100%;
+}
